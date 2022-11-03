@@ -23,7 +23,7 @@
 <div class="content container" id="content">
 	<h2 class="title">공지사항 목록</h2>
 	<table class="table">
-		<thead>
+		<thead class="thead-dark">
 			<tr>
 				<th>연번</th><th>제목</th><th>작성일</th>
 			</tr>

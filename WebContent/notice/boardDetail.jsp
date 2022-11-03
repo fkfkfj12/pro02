@@ -34,10 +34,10 @@
 				
 		</tbody>
 	</table>
-	<div class="btn-group" role="group" aria-label="Basic example">
-		<button type="button" class="btn btn-secondary"><a href="GetBoardListCtrl">목록으로</a></button>
-		<button type="button" class="btn btn-secondary"><a href="UpdateBoardCtrl?notiNo<%=vo.getNotiNo()%>">글수정</a></button>
-		<button type="button" class="btn btn-secondary"><a href="DeleteBoardCtrl">글삭제</a></button>
+	<div class="btn-group">
+		<a href="GetBoardListCtrl" class="btn btn-danger">목록으로</a>
+		<a href="DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-primary">글 삭제</a>
+		<a href="UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-danger">글 수정</a>
 	</div>
 </div>
 </body>

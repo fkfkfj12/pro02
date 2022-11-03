@@ -18,16 +18,16 @@ import kr.co.myshop.vo.Notice;
 @WebServlet("/UpdateBoardCtrl")
 public class UpdateBoardCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private final static String URL = "jdbc:mysql://localhost:3306/myshop1?serverTimezone=Asia/Seoul";
-	private final static String USER = "root";
-	private final static String PASS = "a1234";
+	private static final String Driver = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/myshop1?serverTimezone=Asia/Seoul";
+    private static final String USER = "root";
+    private static final String PASS = "a1234";
 	String sql = "";
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int notiNo = Integer.parseInt(request.getParameter("notiNo"));
 		try {
 			//데이터베이스 연결
-			Class.forName(DRIVER);
+			Class.forName(Driver);
 			sql = "select * from notice where notino=?";
 			Connection con = DriverManager.getConnection(URL, USER, PASS);
 			PreparedStatement pstmt = con.prepareStatement(sql);
